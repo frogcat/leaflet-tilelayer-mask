@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>leaflet-tilelayer-mask</title>
+<style>
+body>div {
+	margin: 20px;
+	font-family: 'Segoe UI' helvetica sans-serif;
+}
+
+pre {
+	font-family: Consolas monospace;
+	background: #eee;
+	padding: 0.5em;
+}
+
+img {
+	display: block;
+	margin: 10px auto;
+	max-width: 90%;
+}
+</style>
+</head>
+<body>
+	<div>
+		<h1>leaflet-tilelayer-mask</h1>
+		<p>Leaflet-tilelayer-mask adds mask effect to tilelayer.</p>
+		<a href="default/"><img src="screenshot.jpg" /></a>
+		<h2>Demo</h2>
+		<dl>
+			<dt>
+				<a href="default/">default</a>
+			</dt>
+			<dd>default behaviour, clip foreground tilelayer with round soft-edge mask.</dd>
+			<dt>
+				<a href="custom/">custom</a>
+			</dt>
+			<dd>You may use custome mask image.</dd>
+		</dl>
+		<h2>Usage</h2>
+		<pre>L.tileLayer.mask('http://www.finds.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.png', {
+	attribution : '<a href="http://habs.dc.affrc.go.jp/">NIAES, NARO</a>',
+	maskUrl : 'star.png',
+	maskWidth : 800,
+	maskHeight : 800
+}).addTo(map);</pre>
+		<p>
+			<a href="https://github.com/frogcat/leaflet-tilelayer-mask/">View the Project on GitHub</a>
+			frogcat/leaflet-tilelayer-mask
+		</p>
+
+		<h2>Author</h2>
+		<p>
+			<a href="https://github.com/frogcat">@frogcat</a>
+		</p>
+		<h2>License</h2>
+		<p>
+			MIT License. See <a href="https://github.com/frogcat/leaflet-tilelayer-mask/blob/master/LICENSE">LICENSE</a> for more
+			details.</
+	</div>
+</body>
+</html>

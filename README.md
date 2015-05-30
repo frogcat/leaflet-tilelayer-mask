@@ -2,6 +2,11 @@
 
 Leaflet-tilelayer-mask adds mask effect to tilelayer.
 
+
+![Leaflet-tilelayer-mask](http://frogcat.github.io/leaflet-tilelayer-mask/screenshot.jpg)
+
+
+
 ## Demo
 
 http://frogcat.github.io/leaflet-tilelayer-mask/
@@ -33,7 +38,7 @@ Option  | Type | Default | Description
 --------|------|---------|-------------
 maskUrl  | String | #1 |  Url of mask image
 maskWidth  | Number | 512 | mask width
-maskHeight  | Number | 512 | mask heightmask height mask
+maskHeight  | Number | 512 | mask height
 
 Note #1 : Built in image 'data:image/png;base64,...' (white circle with soft edge) 
 

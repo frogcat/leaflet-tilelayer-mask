@@ -151,7 +151,7 @@
 		}
 	});
 
-	L.tileLayer.mask = function(url, options, a, b, c) {
-		return new L.TileLayer.Mask(url, options, a, b, c);
+	L.tileLayer.mask = function(url, options) {
+		return new L.TileLayer.Mask(url, options);
 	};
 })(window);

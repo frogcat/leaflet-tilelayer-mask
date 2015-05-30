@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>leaflet-tilelayer-mask</title>
+<title>Leaflet-tilelayer-mask by frogcat</title>
 <style>
 body>div {
 	margin: 20px;
@@ -39,16 +39,42 @@ img {
 			<dd>You may use custome mask image.</dd>
 		</dl>
 		<h2>Usage</h2>
-		<pre>L.tileLayer.mask('http://www.finds.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.png', {
-	attribution : '<a href="http://habs.dc.affrc.go.jp/">NIAES, NARO</a>',
-	maskUrl : 'star.png',
-	maskWidth : 800,
-	maskHeight : 800
-}).addTo(map);</pre>
-		<p>
-			<a href="https://github.com/frogcat/leaflet-tilelayer-mask/">View the Project on GitHub</a>
-			frogcat/leaflet-tilelayer-mask
-		</p>
+		<pre>// Create background tile layer
+var bg  L.tileLayer(...);
+
+// Create foreground tile layer with mask
+var fg = L.tileLayer.<b>mask</b>('http://www.finds.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.png', {
+	<b>maskUrl</b> : 'star.png', // optional
+	<b>maskWidth</b> : 800,  //optional
+	<b>maskHeight</b> : 800 //optional
+});
+
+// Create map with layers and bind listener to update center of mask
+var map = L.map("map", {
+	zoom : ...,
+	center : ...,
+	layers : [ bg, fg ]
+}).on("mousemove", function(e) {
+	fg.<b>setCenter</b>(e.containerPoint.x, e.containerPoint.y);
+});
+</pre>
+
+		<h2>Download</h2>
+		<ul>
+			<li><a href="https://github.com/frogcat/leaflet-tilelayer-mask/zipball/master">Download <strong>ZIP
+						File</strong></a></li>
+			<li><a href="https://github.com/frogcat/leaflet-tilelayer-mask/tarball/master">Download <strong>TAR
+						Ball</strong></a></li>
+			<li><a href="https://github.com/frogcat/leaflet-tilelayer-mask">View On <strong>GitHub</strong></a></li>
+		</ul>
+
+		<h2>Important notice</h2>
+		<ul>
+			<li>Leaflet-tilelayer-mask depends on <a href="http://www.w3.org/TR/SVG/masking.html#Masking">SVG mask</a>.
+			</li>
+			<li>To improve rendering performance, tile layer container is added as a child of map container.</li>
+			<li>Other layers (include Marker, Popup, Vector) will be shown behind the masked tile layer.</li>
+		</ul>
 
 		<h2>Author</h2>
 		<p>

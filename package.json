@@ -1,6 +1,6 @@
 {
   "name": "leaflet-tilelayer-mask",
-  "version": "0.7",
+  "version": "1.0.0",
   "description": "A Leaflet TileLayer with mask effect",
   "main": "leaflet-tilelayer-mask.js",
   "repository": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/frogcat/leaflet-tilelayer-mask#readme",
   "peerDependencies": {
-    "leaflet": "^0.7.0"
+    "leaflet": "^1.0.0"
   }
 }

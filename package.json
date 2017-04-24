@@ -1,0 +1,22 @@
+{
+  "name": "leaflet-tilelayer-mask",
+  "version": "0.7",
+  "description": "A Leaflet TileLayer with mask effect",
+  "main": "leaflet-tilelayer-mask.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frogcat/leaflet-tilelayer-mask.git"
+  },
+  "keywords": [
+    "leaflet"
+  ],
+  "author": "frogcat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frogcat/leaflet-tilelayer-mask/issues"
+  },
+  "homepage": "https://github.com/frogcat/leaflet-tilelayer-mask#readme",
+  "peerDependencies": {
+    "leaflet": "^0.7.0"
+  }
+}

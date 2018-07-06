@@ -60,10 +60,14 @@
       var image = mask.appendChild(L.SVG.create("image"));
       var size = this.getMaskSize();
       mask.setAttribute("id", "leaflet-tilelayer-mask-" + L.stamp(this));
+      mask.setAttribute("x","-100%");
+      mask.setAttribute("y","-100%");
+      mask.setAttribute("width","300%");
+      mask.setAttribute("height","300%");
       image.setAttribute("width", size.x);
       image.setAttribute("height", size.y);
       image.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.options.maskUrl);
-      rootGroup.setAttribute("mask", "url(#" + mask.getAttribute("id") + ")");
+      container.setAttribute("mask", "url(#" + mask.getAttribute("id") + ")");
       this._container = container;
       this._image = image;
       this.setCenter(this._map.getSize().divideBy(2));
@@ -91,6 +95,7 @@
           zoom: zoom
         };
         this._setZoomTransform(level, map.getCenter(), map.getZoom());
+        L.Util.falseFn(level.el.offsetWidth);
         this._levels[zoom] = level;
       }
       this._level = level;

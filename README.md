@@ -10,7 +10,7 @@ Leaflet 1.0.x plugin, Leaflet-tilelayer-mask adds mask effect to tilelayer. Olde
 
 ## Usage
 
-```
+```javascript
 // Create map
 var map = L.map("map", {
  zoom : ...,

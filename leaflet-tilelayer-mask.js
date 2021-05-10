@@ -2,32 +2,26 @@
 
   var defaultMaskUrl = [
     'data:image/png;base64,',
-    'iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAC7lBMVEUAAAABAQECAgIDAwMEBAQF',
-    'BQUGBgYHBwcICAgJCQkKCgoLCwsMDAwNDQ0ODg4PDw8QEBARERESEhITExMUFBQVFRUWFhYXFxcY',
-    'GBgZGRkaGhobGxscHBwdHR0eHh4fHx8gICAhISEiIiIjIyMkJCQlJSUmJiYnJycoKCgpKSkqKior',
-    'KyssLCwtLS0uLi4vLy8wMDAxMTEyMjIzMzM0NDQ1NTU2NjY3Nzc4ODg5OTk6Ojo7Ozs8PDw9PT0+',
-    'Pj4/Pz9AQEBBQUFCQkJDQ0NERERGRkZHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFS',
-    'UlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRl',
-    'ZWVmZmZnZ2doaGhpaWlqampra2tsbGxtbW1ubm5vb29xcXFycnJzc3N0dHR1dXV2dnZ3d3d4eHh5',
-    'eXl6enp7e3t8fHx9fX1+fn5/f3+AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eIiIiKioqLi4uMjIyN',
-    'jY2Ojo6Pj4+QkJCRkZGSkpKTk5OUlJSVlZWWlpaXl5eYmJiZmZmampqbm5ucnJydnZ2enp6fn5+g',
-    'oKChoaGioqKkpKSlpaWmpqanp6eoqKipqamqqqqrq6usrKytra2urq6vr6+wsLCxsbGysrKzs7O0',
-    'tLS1tbW2tra3t7e4uLi5ubm6urq7u7u9vb2+vr6/v7/AwMDBwcHCwsLDw8PExMTFxcXGxsbHx8fI',
-    'yMjJycnKysrLy8vMzMzNzc3Pz8/Q0NDR0dHS0tLT09PU1NTV1dXW1tbX19fY2NjZ2dna2trb29vc',
-    '3Nzd3d3e3t7f39/g4ODh4eHi4uLj4+Pk5OTl5eXm5ubn5+fo6Ojp6enq6urr6+vs7Ozt7e3u7u7v',
-    '7+/w8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7///9A5nLSAAAA',
-    'AWJLR0QAiAUdSAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB98FHBEuKjDLarAAAAAdaVRY',
-    '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'
+    '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',
+    'AElFTkSuQmCC'
   ].join("");
 
   L.TileLayer.Mask = L.TileLayer.extend({
@@ -60,10 +54,10 @@
       var image = mask.appendChild(L.SVG.create("image"));
       var size = this.getMaskSize();
       mask.setAttribute("id", "leaflet-tilelayer-mask-" + L.stamp(this));
-      mask.setAttribute("x","-100%");
-      mask.setAttribute("y","-100%");
-      mask.setAttribute("width","300%");
-      mask.setAttribute("height","300%");
+      mask.setAttribute("x", "-100%");
+      mask.setAttribute("y", "-100%");
+      mask.setAttribute("width", "300%");
+      mask.setAttribute("height", "300%");
       image.setAttribute("width", size.x);
       image.setAttribute("height", size.y);
       image.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.options.maskUrl);

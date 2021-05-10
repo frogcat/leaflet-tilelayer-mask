@@ -39,7 +39,7 @@ Option   | Type              | Default          | Description
 maskUrl  | String            | #1               | Url of mask image
 maskSize | L.point or Number | L.point(512,512) | mask size
 
-Note #1 : Built in image 'data:image/png;base64,...' (white circle with soft edge)
+Note #1 : Built in image 'data:image/png;base64,...' (white circle with soft edge over transparent background)
 
 ## Methods
 

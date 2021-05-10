@@ -25,11 +25,12 @@
 			attribution: '<a href="http://maps.gsi.go.jp/development/">GSI Ortho</a>'
 		}).addTo(map);
 
-		var mask = L.tileLayer.mask('http://www.finds.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.png', {
-			attribution: '<a href="http://habs.dc.affrc.go.jp/">NIAES, NARO</a>',
+		var mask = L.tileLayer.mask('https://habs.rad.naro.go.jp/rapid16/{z}/{x}/{y}.png', {
+			attribution: '<a href="https://habs.rad.naro.go.jp/">NIAES, NARO</a>',
 			maskSize: 512,
 			maxZoom: 18,
-			maxNativeZoom: 17
+			maxNativeZoom: 16,
+			tms: true
 		}).addTo(map);
 
 		map.on("mousemove", function(e) {

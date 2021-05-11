@@ -113,6 +113,12 @@
         coords: coords,
         current: true
       };
+    },
+    _setZoomTransform: function(level, center, zoom) {
+      var scale = this._map.getZoomScale(zoom, level.zoom),
+        translate = level.origin.multiplyBy(scale)
+        .subtract(this._map._getNewPixelOrigin(center, zoom)).round();
+      level.el.setAttribute("transform", "translate(" + translate.x + "," + translate.y + ")");
     }
   });
 

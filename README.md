@@ -21,7 +21,7 @@ var map = L.map("map", {
 L.tileLayer(...).addTo(map);
 
 // Create foreground tile layer with mask
-var fg = L.tileLayer.mask('https://habs.rad.naro.go.jp/rapid16/{z}/{x}/{y}.png', {
+var fg = L.tileLayer.mask('https://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.jpg', {
   maskUrl : 'star.png', // optional
   maskSize : 1024  //optional
 ).addTo(map);

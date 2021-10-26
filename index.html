@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<title>leaflet-tilelayer-mask</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 	<script src="leaflet-tilelayer-mask.js"></script>
 </head>
 
@@ -21,16 +21,15 @@
 		});
 		map.zoomControl.setPosition("bottomright");
 		map.attributionControl.addAttribution("<a href='https://github.com/frogcat/leaflet-tilelayer-mask'>fork me on GitHub</a>");
-		L.tileLayer('http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg', {
-			attribution: '<a href="http://maps.gsi.go.jp/development/">GSI Ortho</a>'
+		L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg', {
+			attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html">GSI seamlessphoto</a>'
 		}).addTo(map);
 
-		var mask = L.tileLayer.mask('https://habs.rad.naro.go.jp/rapid16/{z}/{x}/{y}.png', {
-			attribution: '<a href="https://habs.rad.naro.go.jp/">NIAES, NARO</a>',
+		var mask = L.tileLayer.mask('https://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.jpg', {
+			attribution: '<a href="https://aginfo.cgk.affrc.go.jp/tmc/index.html">Source: NARO</a>',
 			maskSize: 512,
 			maxZoom: 18,
-			maxNativeZoom: 16,
-			tms: true
+			maxNativeZoom: 17
 		}).addTo(map);
 
 		map.on("mousemove", function(e) {
